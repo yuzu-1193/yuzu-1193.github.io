@@ -15,7 +15,7 @@ const SKILLS: Skill[] = [
   {
     name: "React / Next.js",
     category: "Language & Framework",
-    level: "個人開発・学習レベル",
+    level: "個人開発・学習中",
     period: "約半年",
     comment: "本ポートフォリオサイトを含むWebアプリケーション開発で採用。コンポーネント設計、App Routerによるファイルベースルーティング、およびReact Server Componentsを用いたモダンなWebフロントエンド技術を学習中です。",
     color: "from-sky-400 to-blue-500",
@@ -37,9 +37,25 @@ const SKILLS: Skill[] = [
     color: "from-orange-400 to-red-500",
   },
   {
+    name: "Python",
+    category: "Language & Framework",
+    level: "基礎から実践",
+    period: "約2年半",
+    comment: "最も慣れ親しんでいるメイン言語。大学での情報工学の学びを通じたアルゴリズムの実装から、データ処理、AIモデルの基礎的な活用まで、幅広い用途で日常的に使用しています。",
+    color: "from-blue-500 to-yellow-400", // Pythonの公式カラー（青×黄）
+  },
+  {
+    name: "C言語",
+    category: "Language & Framework",
+    level: "基礎知識・学修",
+    period: "約1年",
+    comment: "大学の講義を通じて修得。ポインタやメモリ管理、基本的なアルゴリズムの実装など、コンピュータ・アーキテクチャの根底に関わるプログラミングの基礎的な理解を深めました。",
+    color: "from-gray-500 to-slate-700",
+  },
+  {
     name: "Tailwind CSS",
     category: "Tools & Others",
-    level: "実用開発レベル",
+    level: "個人開発・学習中",
     period: "約半年",
     comment: "本サイトのスタイリングに全面的に採用。ユーティリティクラスによる効率的かつ一貫したコンポーネントデザイン、レスポンシブなUI設計を素早く構築できます。",
     color: "from-cyan-400 to-teal-500",
@@ -51,6 +67,14 @@ const SKILLS: Skill[] = [
     period: "約1年半",
     comment: "個人でのバージョン管理、およびGitHubへのコード公開・管理に日常的に使用。基本的なブランチ作成、コミット履歴の管理、Issueを用いた作業整理などを身につけています。",
     color: "from-amber-500 to-orange-600",
+  },
+  {
+    name: "MySQL / SQL",
+    category: "Tools & Others",
+    level: "基礎知識・学修",
+    period: "約1年",
+    comment: "大学での講義や自己学習を通じてリレーショナルデータベースの基礎を修得。基本的なCRUD操作はもちろん、正規化やテーブル設計など、データを安全かつ効率的に管理する仕組みを理解しています。",
+    color: "from-blue-600 to-cyan-500",
   },
 ];
 
@@ -69,7 +93,7 @@ const PROJECTS: Project[] = [
     title: "就職活動用ポートフォリオサイト",
     tag: "Web Site",
     period: "2026年8月",
-    description: "自身の経歴、スキル、エンジニアとしてのビジョンを採用担当者に分かりやすく伝えるためのシングルページWebサイト。UI/UXのモダンさと、情報設計の明瞭さにこだわりました。",
+    description: "自身の経歴、スキル、エンジニアとしてのビジョンを視覚的に分かりやすく伝えるためのポートフォリオ。UI/UXのモダンさと、情報設計の明瞭さにこだわりました。",
     techStack: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "GitHub / Vercel"],
     points: [
       "最新のNext.jsとTailwind CSS v4による、追加のUIライブラリに頼らない超軽量・高速なレンダリングの実装",
@@ -84,7 +108,7 @@ const PROJECTS: Project[] = [
     description: "「インプットを確実に実践（アウトプット）へ繋げる」をコンセプトとした、技術書や教養本の読書記録と学びを分類・記録できるWebアプリケーション。",
     techStack: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "PostgreSQL", "NextAuth.js"],
     points: [
-      "読読んだ本ごとに「得られた最大の学び (Key Takeaway)」と「明日から起こす具体アクション」を紐付け管理",
+      "読んだ本ごとに「得られた最大の学び (Key Takeaway)」と「明日から起こす具体アクション」を紐付け管理",
       "ジャンル別の統計グラフ機能で、自身のスキルアップや学習進捗を直感的に可視化",
       "APIを介して、自身のポートフォリオサイト側にもリアルタイムに『最近読んだ本』を連動表示する機能の搭載",
     ],
@@ -169,8 +193,8 @@ export default function Home() {
             </h2>
             
             <p className="text-sm md:text-base text-slate-300 leading-relaxed max-w-xl">
-              大学で情報工学を体系的に学びつつ、Web開発技術（React/Next.js/TypeScript）に関心を持ち、モダンなフロントエンド開発を自主的に学んでいます。
-              技術を追求する知的好奇心と、ユーザーの課題解決に向けて丁寧に取り組む姿勢を大切にしています。
+              C言語やPythonを用いたアルゴリズム構築から、Next.jsによるモダンなUI設計まで、情報の裏側の仕組みから表側の表現まで幅広く探究しています。
+              単にコードを書くのではなく、システム全体を俯瞰し、ビジネスやユーザーにとって本当に価値のあるシステムを作れるエンジニアを目指しています。
             </p>
 
             {/* GitHub、その他へのリンク */}
