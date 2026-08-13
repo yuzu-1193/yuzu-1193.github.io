@@ -86,6 +86,7 @@ interface Project {
   techStack: string[];
   points: string[];
   isComingSoon?: boolean;
+  isPortfolioSite?: boolean;
 }
 
 const PROJECTS: Project[] = [
@@ -100,6 +101,7 @@ const PROJECTS: Project[] = [
       "デバイスを選ばずに完璧な配置を維持するフルレスポンシブデザイン",
       "スキルや活動履歴をオブジェクト配列から動的に描画する、保守・更新しやすいコンポーネント設計",
     ],
+    isPortfolioSite: true,
   },
   {
     title: "AI搭載日記アプリ「Dialog」 (GDGハッカソン参加作品)",
@@ -469,8 +471,8 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* カードフッター（Coming Soon 以外のプロジェクト） */}
-                {!project.isComingSoon && (
+                {/* カードフッター（ポートフォリオサイトのみ表示） */}
+                {project.isPortfolioSite && (
                   <div className="p-6 pt-0 bg-slate-50 border-t border-slate-100/60 mt-auto flex justify-end">
                     <span className="text-xs font-semibold text-indigo-600 hover:text-indigo-700 transition-colors inline-flex items-center gap-1">
                       このサイトが実績にあたります
