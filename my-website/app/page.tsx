@@ -173,21 +173,23 @@ const HOBBIES = [
   { name: "音楽ライブ鑑賞", comment: "アーティストの創り出す作品や演出の細部（照明、音響など）にこだわりを感じつつ、ライブならではの圧倒的なエネルギーを浴びてリフレッシュ。新しい視野と活力を得る機会としています。" },
 ];
 
-function CatMascot() {
+function CatBackground() {
   return (
-    <div className="relative mx-auto w-full max-w-[300px]">
-      <div className="absolute -left-3 top-4 text-2xl animate-bounce [animation-delay:0.1s]">🐾</div>
-      <div className="absolute -right-2 top-12 text-xl animate-bounce [animation-delay:0.5s]">🐾</div>
-      <div className="absolute left-4 bottom-2 text-2xl animate-bounce [animation-delay:0.9s]">🐾</div>
-
-      <div className="relative overflow-hidden rounded-[28px] border border-white/20 bg-gradient-to-br from-amber-100 via-orange-50 to-pink-100 p-5 shadow-[0_20px_60px_rgba(15,23,42,0.25)]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.75),transparent_60%)]" />
-        <div className="relative z-10 text-center text-slate-700">
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-orange-500">Cat mode</p>
-          <div className="mt-3 text-[110px] leading-none drop-shadow-[0_12px_20px_rgba(245,158,11,0.35)]">🐈</div>
-          <p className="mt-2 text-lg font-bold text-slate-800">Meow</p>
-          <p className="text-xs text-slate-600">今日もいいコードを探してる</p>
-        </div>
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div className="cat-silhouette cat-silhouette-1">
+        <svg viewBox="0 0 260 180" role="img" aria-label="cat silhouette">
+          <path d="M36 112c0-26 17-46 41-52 10-31 34-52 66-52 32 0 54 19 67 52 26 5 42 28 42 52 0 32-23 58-52 58H88c-29 0-52-26-52-58Zm54-72 16 24 16-24 22 26 18-24h-6l-15 18-15-18-16 18-16-18-15 18h-4l18 24 22-26Z" />
+        </svg>
+      </div>
+      <div className="cat-silhouette cat-silhouette-2">
+        <svg viewBox="0 0 220 150" role="img" aria-label="cat silhouette">
+          <path d="M26 96c0-19 12-34 30-38 8-23 29-41 54-41 28 0 49 19 57 43 19 4 32 21 32 39 0 26-20 48-46 48H72c-26 0-46-22-46-51Zm44-58 12 18 12-18 15 19 14-18h-4l-11 14-11-14-10 14-12-14-10 14h-4l14 18 15-19Z" />
+        </svg>
+      </div>
+      <div className="cat-silhouette cat-silhouette-3">
+        <svg viewBox="0 0 200 130" role="img" aria-label="cat silhouette">
+          <path d="M20 92c0-14 8-26 22-31 7-19 22-32 41-32 22 0 39 13 47 33 14 4 23 17 23 31 0 22-17 40-39 40H58c-22 0-38-18-38-41Zm32-42 11 15 11-15 12 16 12-16h-3l-9 12-9-12-9 12-9-12-9 12h-3l12 16 11-16Z" />
+        </svg>
       </div>
     </div>
   );
@@ -201,6 +203,8 @@ export default function Home() {
       
       {/* ヒーローセクション */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white py-24 md:py-32 px-6">
+        <CatBackground />
+
         {/* 背景のアブストラクトな円形グラデーション（美しく浮き上がる） */}
         <div className="absolute top-1/4 right-0 md:right-12 w-72 md:w-96 h-72 md:h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-10 left-10 w-48 md:w-64 h-48 md:h-64 bg-cyan-500/10 rounded-full blur-3xl" />
@@ -254,9 +258,7 @@ export default function Home() {
           </div>
 
           {/* 右側：基本資格などのクイックサマリーカード */}
-          <div className="md:col-span-5 space-y-5">
-            <CatMascot />
-
+          <div className="md:col-span-5">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10 shadow-xl space-y-4">
               <h3 className="text-sm font-semibold text-indigo-300 uppercase tracking-wider border-b border-white/10 pb-2">
                 Quick Profile
