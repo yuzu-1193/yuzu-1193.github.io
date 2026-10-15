@@ -173,6 +173,26 @@ const HOBBIES = [
   { name: "音楽ライブ鑑賞", comment: "アーティストの創り出す作品や演出の細部（照明、音響など）にこだわりを感じつつ、ライブならではの圧倒的なエネルギーを浴びてリフレッシュ。新しい視野と活力を得る機会としています。" },
 ];
 
+function CatMascot() {
+  return (
+    <div className="relative mx-auto w-full max-w-[300px]">
+      <div className="absolute -left-3 top-4 text-2xl animate-bounce [animation-delay:0.1s]">🐾</div>
+      <div className="absolute -right-2 top-12 text-xl animate-bounce [animation-delay:0.5s]">🐾</div>
+      <div className="absolute left-4 bottom-2 text-2xl animate-bounce [animation-delay:0.9s]">🐾</div>
+
+      <div className="relative overflow-hidden rounded-[28px] border border-white/20 bg-gradient-to-br from-amber-100 via-orange-50 to-pink-100 p-5 shadow-[0_20px_60px_rgba(15,23,42,0.25)]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.75),transparent_60%)]" />
+        <div className="relative z-10 text-center text-slate-700">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-orange-500">Cat mode</p>
+          <div className="mt-3 text-[110px] leading-none drop-shadow-[0_12px_20px_rgba(245,158,11,0.35)]">🐈</div>
+          <p className="mt-2 text-lg font-bold text-slate-800">Meow</p>
+          <p className="text-xs text-slate-600">今日もいいコードを探してる</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // --- メインコンポーネント ---
 
 export default function Home() {
@@ -234,7 +254,9 @@ export default function Home() {
           </div>
 
           {/* 右側：基本資格などのクイックサマリーカード */}
-          <div className="md:col-span-5">
+          <div className="md:col-span-5 space-y-5">
+            <CatMascot />
+
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10 shadow-xl space-y-4">
               <h3 className="text-sm font-semibold text-indigo-300 uppercase tracking-wider border-b border-white/10 pb-2">
                 Quick Profile
